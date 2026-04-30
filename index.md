@@ -3,32 +3,29 @@ layout: default
 title: Home
 ---
 
-# Hi, I'm Dmytro 👋
+<div class="layout">
 
-Clinical Statistics • R • Data Science
+  <!-- MAIN CONTENT -->
+  <div class="content">
 
----
+    <h2 class="section-title">Projects</h2>
 
-## 🔗 Links
+    <div class="grid">
 
-- [GitHub](https://github.com/yourname)
-- [LinkedIn](https://linkedin.com/in/yourname)
+      <a class="card" href="https://your-link-1">
+        <img src="/assets/img/project1.png">
+        <h3>Handbook</h3>
+        <p>R statistics and modeling.</p>
+      </a>
 
----
+      <a class="card" href="/projects/handbook.html">
+        <img src="/assets/img/project1.png">
+        <h3>Handbook</h3>
+        <p>R statistics and modeling.</p>
+      </a>
 
-## 📊 Projects
+    </div>
 
-### Statistical Handbook
-R bookdown project for statistics learning.
+  </div>
 
-👉 https://your-handbook-link
-
----
-
-### R Analytics
-Exploratory analysis in R.
-
----
-
-## 👨‍💻 About
-
+</div>

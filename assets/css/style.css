@@ -1,27 +1,202 @@
+/* =========================
+   GLOBAL / BACKGROUND
+========================= */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  max-width: 800px;
-  margin: auto;
+  margin: 0;
+  
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.3px; 
+
+  /* Background image */
+  background: url("/assets/img/background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.layout {
+  display: flex;
+  min-height: 100vh;
+
+  /* Light transparent overlay (lets background show) */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+/* =========================
+   SIDEBAR (LEFT PANEL)
+========================= */
+.sidebar {
+  width: 280px;
+  height: 100vh; 
+  padding: 40px 20px;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column; 
+
+  /* Glass effect */
+  background: rgba(35, 53, 78, 0.45);
+  backdrop-filter: blur(12px);
+
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-top {
+  display: block; /* no flex needed */
+}
+
+.sidebar-bottom {
+  margin-top: auto; /* ONLY THIS handles positioning */
+}
+
+/* PROFILE IMAGE */
+.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #58a6ff;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* NAME */
+.sidebar h2 {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+/* SUBTEXT */
+.sidebar p {
+  color: #e5e7eb;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+
+  color: white;
+  font-size: 18px;
+
+  transition: 0.2s;
+}
+
+.links a:hover {
+  background: #58a6ff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MAIN CONTENT (RIGHT SIDE)
+========================= */
+.content {
+  flex: 1;
   padding: 40px;
-  background: #0f1117;
-  color: #e6edf3;
+
+  /* very transparent */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+}
+/* =========================
+   PROJECT GRID (3 columns desktop)
+========================= */
+.grid {
+  display: grid;
+
+  /* 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
 }
 
-a {
-  color: #58a6ff;
+/* responsive behavior */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   CARDS (GLASS STYLE)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  overflow: hidden;
   text-decoration: none;
+  color: #111827;
+
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.25s;
 }
 
-a:hover {
-  text-decoration: underline;
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-h1, h2 {
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 5px;
+/* =========================
+   TITLE
+========================= */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #111827;
+  font-weight: 600;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #30363d;
+/* =========================
+   CARD IMAGE (NO STRETCH)
+========================= */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT */
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 0 10px 15px;
+  color: #374151;
+}
+
+/* =========================
+   MOBILE LAYOUT FIX
+========================= */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
 }

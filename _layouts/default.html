@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- TOP SECTION -->
+    <div class="sidebar-top">
+
+      <img src="/assets/img/profile.jpg" class="profile">
+
+      <h2>Dmytro Hasan</h2>
+      <p>Statistical Programmer</p>
+
+      <!-- HOME ICON -->
+      <div class="links">
+        <a href="/" title="Home">
+          <i class="fas fa-home"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ICONS -->
+    <div class="sidebar-bottom">
+      <div class="links">
+
+        <a href="https://github.com/yourname" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/yourname" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:your@email.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    {{ content }}
+  </div>
+
+</div>
+
+</body>
+</html>
