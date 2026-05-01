@@ -18,7 +18,7 @@ crop_center <- function(img, w, h) {
 for (f in files) {
   img <- image_read(f)
 
-  img2 <- crop_center(img, 600, 400)
+  img2 <- crop_center(img, 300, 200)
 
   image_write(img2, file.path("assets", "img", paste0("cropped_", basename(f))))
 }
