@@ -194,13 +194,19 @@ body {
 }
 
 /* =========================
-   CARD IMAGE (NO STRETCH)
+   CARD IMAGE  
 ========================= */
 .card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+  width: 100%; 
+  object-fit: cover;        /* auto crop */
+  object-position: center ; /* move focus upward keep center */
   display: block;
+  transition: transform 0.3s ease;
+  aspect-ratio: 3 / 2;
+} 
+
+.card:hover img {
+  transform: scale(1.05);   /* nice zoom crop effect */
 }
 
 /* TEXT */
@@ -231,11 +237,7 @@ body {
 /* =========================
    CYBERPUNK DARK MODE
 ========================= */
-
-
-/* =========================
-   CYBERPUNK DARK MODE (FIXED GLASS)
-========================= */
+ 
 
 body.dark-mode {
   background: url("/assets/img/background-cyberpunk.png") no-repeat center center fixed !important;

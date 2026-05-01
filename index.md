@@ -13,13 +13,13 @@ title: Home
     <div class="grid">
 
       <a class="card" href="https://your-link-1">
-        <img src="/assets/img/project1.png">
+        <img src="/assets/img/cropped_project1.png">
         <h3>Handbook</h3>
         <p>R statistics and modeling.</p>
       </a>
 
       <a class="card" href="/projects/handbook.html">
-        <img src="/assets/img/project1.png">
+        <img src="/assets/img/cropped_project1.png">
         <h3>Handbook</h3>
         <p>R statistics and modeling.</p>
       </a>
