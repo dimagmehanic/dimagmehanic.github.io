@@ -30,7 +30,7 @@ title: Home
       <li>Shared knowledge and experience to help others improve their technical and communication skills.</li>
       <li>Experience in machine learning using Python and applying it to real-world data.</li>
       <li>Willing to collaborate with teams and support projects and initiatives in clinical trials as needed.</li>
-      <li>xperience in developing R Shiny applications and building R packages for data analysis and reporting.</li> 
+      <li>Experience in developing R Shiny applications and building R packages for data analysis and reporting.</li> 
     </ul>
     <h2 class="section-title">PUBLICATIONS</h2>
     <div class="grid">
