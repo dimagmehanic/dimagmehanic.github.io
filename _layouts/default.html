@@ -18,18 +18,6 @@
 
       <h2>Dmytro Hasan</h2>
       <p>Statistical Programmer</p>
-
-      <!-- HOME ICON -->
-      <div class="links">
-        <a href="/" title="Home">
-          <i class="fas fa-home"></i>
-        </a>
-      </div>
-
-    </div>
-
-    <!-- BOTTOM ICONS -->
-    <div class="sidebar-bottom">
       <div class="links">
 
         <a href="https://github.com/yourname" target="_blank">
@@ -45,6 +33,19 @@
         </a>
 
       </div>
+
+      <!-- HOME ICON -->
+      <div class="text-links">
+        <a href="/" title="Home">Home</a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ICONS -->
+    <div class="sidebar-bottom">
+      <div class="theme-toggle">
+        <button onclick="toggleTheme()">Toggle Mode</button>
+      </div>
     </div>
 
   </div>
@@ -55,6 +56,25 @@
   </div>
 
 </div>
+<script>
+  function toggleTheme() {
+    if (document.body.classList.contains("dark-mode")) {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+    }
+  }
 
+  /* load theme on every page */
+  (function () {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  })();
+</script>
 </body>
 </html>

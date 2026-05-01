@@ -81,10 +81,16 @@ body {
 }
 
 .links a {
-  display: inline-block;
+  display: inline-flex;              /* 🔥 better centering */
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;                      /* FIXED size */
+  height: 40px;
+
   background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
   border-radius: 50%;
+
   margin: 0 6px;
 
   color: white;
@@ -94,10 +100,31 @@ body {
 }
 
 .links a:hover {
-  background: #58a6ff;
+  background: #ff00ff;
   transform: translateY(-2px);
 }
 
+.text-links a {
+  display: block;
+  margin: 6px 0;
+
+  margin-top: 30px;   /* 👈 increase this to move it down */
+
+  background: transparent;
+  padding: 4px 0;
+
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.text-links a:hover {
+  color: white;
+  background-color: #ff00ff;
+  transform: translateX(4px);
+}
 /* =========================
    MAIN CONTENT (RIGHT SIDE)
 ========================= */
@@ -146,7 +173,7 @@ body {
   text-decoration: none;
   color: #111827;
 
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(124, 199, 242, 0.5);
   transition: 0.25s;
 }
 
@@ -199,4 +226,93 @@ body {
     border-right: none;
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
+}
+
+/* =========================
+   CYBERPUNK DARK MODE
+========================= */
+
+
+/* =========================
+   CYBERPUNK DARK MODE (FIXED GLASS)
+========================= */
+
+body.dark-mode {
+  background: url("/assets/img/background-cyberpunk.png") no-repeat center center fixed !important;
+  background-size: cover !important;
+}
+
+/* softer overlay (keeps transparency) */
+body.dark-mode .layout {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* sidebar glass (IMPORTANT FIX) */
+body.dark-mode .sidebar {
+  background: rgba(10, 12, 30, 0.55); /* lowered opacity */
+  border-right: 1px solid rgba(255, 0, 255, 0.25);
+}
+
+/* text stays readable */
+body.dark-mode .sidebar h2,
+body.dark-mode .sidebar p {
+  color: #e5e7eb;
+}
+
+/* neon icons */
+body.dark-mode .links a {
+  background: rgba(255, 0, 255, 0.15);
+}
+
+body.dark-mode .links a:hover {
+  background: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+body.dark-mode .content {
+  background: rgba(10, 12, 30, 0.05); /* lowered opacity */
+  color: #e5e7eb;
+  backdrop-filter: blur(4px);
+}
+
+body.dark-mode .section-title {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.25);
+}
+
+/* cards glass preserved */
+body.dark-mode .card {
+  border: 1px solid rgba(255, 0, 255, 0.25);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+
+
+.theme-toggle {
+  margin-top: 20px;
+}
+
+.theme-toggle button {
+  padding: 8px 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.3px;
+
+  transition: 0.2s;
+}
+
+.theme-toggle button:hover {
+  background: #ff00ff;
+  transform: translateY(-2px);
 }
