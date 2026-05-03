@@ -53,7 +53,7 @@ title: Home
 
     <div class="grid">
 
-      <a class="card" href="/projects/handbook.html">
+      <a class="card" href="https://dimagmehanic.github.io/ClinStatAparat">
         <img src="/assets/img/cropped_handbook.png">
         <h3>Handbook</h3>
         <p>R statistics and modeling.</p>
