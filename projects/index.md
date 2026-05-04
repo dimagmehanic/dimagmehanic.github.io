@@ -26,6 +26,17 @@ title: Projects
 
     </div>
 
+    <h2 class="section-title">3d Designs</h2>
+
+    <div class="grid">
+
+      <a class="card" href="/projects/macbook.html">
+        <img src="/assets/img/cropped_macbook.png">
+        <h3>MacBook Holder</h3>
+        <p>OpenSCAD macbook holder.</p>
+      </a> 
+
+    </div>
   </div>
 
 </div>
